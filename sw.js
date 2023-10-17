@@ -21,7 +21,7 @@ self.addEventListener('install', e=>{
     console.log("Instalando");
 
     const staticCache = caches.open(STATIC)
-    .then(cache =>{+
+    .then(cache =>{
         cache.addAll(APP_SHELL);
     })
     const inmutableCache =  caches.open(INMUTABLE)
